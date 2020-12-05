@@ -1,0 +1,27 @@
+﻿@model ElliotJDNaylor.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="intro flex flex-align-center">
+    <div class="intro-img">
+        <img src="~/Content/Images/intro-portrait.png" alt="" />
+    </div>
+    <div class="intro-text">
+        <h2>Hello, <small>a little bit about me</small></h2>
+        <ul class="featured-icons">
+            @foreach (var link in Model.Links)
+            {
+                <li>@Html.Partial("~/Views/Shared/CustomElements/_Custom-Button.cshtml", link)</li>
+            }
+        </ul>
+        <p>
+            Sheffield born video game enthusiast. Nerd.  I eat anything covered breadcrumbs.
+        </p>
+        <p>
+            I am Elliot Naylor, a web developer currently working for <a target="_blank" rel="noreferrer" href="https://tractivity.co.uk">Tractivity Ltd</a>.
+            Feel free to have a look around my website and if you need to get in touch, you can request my details <a href="@Url.Action("Index", "Contact")">here</a>.
+        </p>
+    </div>
+</div>
