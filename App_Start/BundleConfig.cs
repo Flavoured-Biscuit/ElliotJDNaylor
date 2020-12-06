@@ -20,9 +20,13 @@ namespace ElliotJDNaylor.App_Start
                 "~/Scripts/font-awesome.js"));
 
             //Styles
+            bundles.Add(new StyleBundle("~/bundles/animated-button").Include(
+                "~/Content/animated-button.css"));
+
             bundles.Add(new StyleBundle("~/bundles/css").Include(
-                "~/Content/animated-button.css",
                 "~/Content/Site.css"));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
